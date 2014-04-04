@@ -23,6 +23,8 @@
   <body>
 	<div ng-app="formConverter" ng-controller="CurncyCtrl" class="mainDiv">
 		<form ng-submit="submitTheForm()">
+			<input type="radio" ng-model="response" value="php">PHP
+			<input type="radio" ng-model="response" value="ajs">Angular JS
 			<input type="number" ng-model="amount" placeholder="1">
 			<select ng-model="selectedCountries1" ng-options="c.val as c.name for c in countries">	</select>
 			<select ng-model="selectedCountries2" ng-options="c.val as c.name for c in countries">	</select>

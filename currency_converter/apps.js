@@ -175,7 +175,11 @@
      $scope.submitTheForm = function(item, event) 
      {
        
-        
+        var responseNeeded = "ajs";
+        if($scope.response != undefined)
+        {
+		  responseNeeded =$scope.response;
+		}
 		$http.get('http://www.google.com/finance/converter',{
 					params:{
 						/*selectedCountries1:$scope.selectedCountries1,
