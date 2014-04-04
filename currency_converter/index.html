@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Demo 1</title>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+		
+		<script type="text/javascript" src="apps.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<style>
+		.mainDiv
+		{
+		 margin: 172px 379px;
+		}
+		</style>
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	</head>
+  <body>
+	<div ng-app="formConverter" ng-controller="CurncyCtrl" class="mainDiv">
+		<form ng-submit="submitTheForm()">
+			<input type="number" ng-model="amount" placeholder="1">
+			<select ng-model="selectedCountries1" ng-options="c.val as c.name for c in countries">	</select>
+			<select ng-model="selectedCountries2" ng-options="c.val as c.name for c in countries">	</select>
+			<button ng-click="submitTheForm()">Submit Form</button>
+			<div class="s" ng-show="message">{{message}}</div>
+		</form>
+	</div>
+ </body>
+	
+</html>
